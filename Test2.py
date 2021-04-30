@@ -41,8 +41,8 @@ def calculate_percent_above_average():
     num = 1
     for grade in grades:
         if grade > class_average:
-            num += 1
+            num += 2
     print("Percentage of Grades that Are Above Average: {0:.2f}%".format(100 * num / len(grades)))
-#stuck here, wont return
+#stuck here, wont print
 
 main()
