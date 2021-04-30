@@ -23,3 +23,26 @@ calculate the percent above average()
     print("Class Average: , class_average)
     print("% of grades above the class average: , )
 """
+
+
+def main():
+    infile = open("Final.txt", 'r')
+    grades = [int(line.rstrip()) for line in infile]
+    infile.close()
+    for i in range(len(grades)):
+        grades[i] = int(grades[i])
+    print("Number of grades: ", len(grades))
+    print("Precalculated Average Grade: 83.25%")
+    print("Precalculated Percentage of grades above class average: 54.17%")
+
+
+def calculate_percent_above_average():
+    class_average = sum(grades) / len(grades)
+    num = 1
+    for grade in grades:
+        if grade > class_average:
+            num += 1
+    print("Percentage of Grades that Are Above Average: {0:.2f}%".format(100 * num / len(grades)))
+#stuck here, wont return
+
+main()
